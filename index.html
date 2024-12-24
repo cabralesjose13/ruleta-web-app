@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Lotería (1-300)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulador de Lotería (1-300)</h1>
+
+        <!-- Caja de lotería -->
+        <div class="lottery-container">
+            <div id="lotteryBallContainer" class="ball-container">
+                <!-- Las bolas aparecerán aquí durante la animación -->
+            </div>
+        </div>
+
+        <h2>El número ganador es:</h2>
+        <div id="lotteryResult" class="result">-</div>
+
+        <button onclick="spinLottery()">Girar Lotería</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

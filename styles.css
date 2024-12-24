@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+.lottery-container {
+    margin-top: 20px;
+    width: 250px;
+    height: 300px;
+    border: 5px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: #f0f0f0;
+}
+
+.ball-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lottery-ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FF6F61;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    animation: ballMove 3s ease-in-out infinite;
+}
+
+@keyframes shakeBalls {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes ballMove {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para mostrar el número ganador más grande */
+#lotteryResult {
+    font-size: 50px; /* Aumentamos el tamaño de la fuente */
+    font-weight: bold;
+    color: #FF6F61; /* Cambiamos el color para que resalte más */
+    margin-top: 20px;
+}
